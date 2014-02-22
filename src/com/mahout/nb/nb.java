@@ -159,7 +159,7 @@ public class nb {
 	    System.err.println("perlabelThetaNormalizer="+perlabelThetaNormalizer);
 	    NaiveBayesModel bayesModel = new NaiveBayesModel(scoresPerLabelAndFeature, vector__SPF, vector__SPL, perlabelThetaNormalizer,
 	        alphaI);
-	    System.err.println("bayesModel="+bayesModel);
+	    System.err.println("bayesModel="+bayesModel.toString());
 	    
 	    
 	    System.out.println("classify------------------------------------------------");
