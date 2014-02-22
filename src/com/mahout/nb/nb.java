@@ -15,7 +15,6 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.mahout.classifier.naivebayes.AbstractNaiveBayesClassifier;
 import org.apache.mahout.classifier.naivebayes.NaiveBayesModel;
-import org.apache.mahout.classifier.naivebayes.StandardNaiveBayesClassifier;
 import org.apache.mahout.math.DenseVector;
 import org.apache.mahout.math.Matrix;
 import org.apache.mahout.math.NamedVector;
@@ -23,6 +22,8 @@ import org.apache.mahout.math.RandomAccessSparseVector;
 import org.apache.mahout.math.SparseMatrix;
 import org.apache.mahout.math.Vector;
 import org.apache.mahout.math.function.Functions;
+
+import com.mahout.source.CustomStandardNaiveBayesClassifier;
 
 public class nb {
 	
@@ -164,13 +165,16 @@ public class nb {
 	    
 	    System.out.println("classify------------------------------------------------");
 	    AbstractNaiveBayesClassifier  classifier =
-	    	new StandardNaiveBayesClassifier(bayesModel);
+	    	new CustomStandardNaiveBayesClassifier(bayesModel);
 	    
 	    
 	    for(Vector vector2 : namedVectorList){
 	    	Vector result = classifier.classifyFull(vector2);
 	    	System.err.println("vector2="+vector2+"[result]="+result);
 	    }
+	    System.out.println();
+	    System.out.println(Math.log(1.75/6.2));
+	    System.out.println(-3.441679773180848/Math.log(1.75/6.2));
 	    
 	    
 	   
