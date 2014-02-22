@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-6-openjdk"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/hadoop-core-1.1.2.jar" sourcepath="D:/hadoop/hadoop-1.1.2/src/core"/>
+	<classpathentry kind="lib" path="lib/mahout-core-0.8.jar" sourcepath="E:/bigData/mahout/mahout-distribution-0.8-src.zip"/>
+	<classpathentry kind="lib" path="lib/mahout-math-0.8.jar" sourcepath="E:/bigData/mahout/mahout-distribution-0.8-src.zip"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/guava-14.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/commons-logging-1.1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
