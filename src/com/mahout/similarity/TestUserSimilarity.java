@@ -8,9 +8,14 @@ import org.apache.mahout.cf.taste.common.TasteException;
 import org.apache.mahout.cf.taste.common.Weighting;
 import org.apache.mahout.cf.taste.impl.model.file.FileDataModel;
 import org.apache.mahout.cf.taste.impl.similarity.EuclideanDistanceSimilarity;
+import org.apache.mahout.cf.taste.impl.similarity.LogLikelihoodSimilarity;
 import org.apache.mahout.cf.taste.impl.similarity.PearsonCorrelationSimilarity;
+import org.apache.mahout.cf.taste.impl.similarity.SpearmanCorrelationSimilarity;
+import org.apache.mahout.cf.taste.impl.similarity.TanimotoCoefficientSimilarity;
+import org.apache.mahout.cf.taste.impl.similarity.UncenteredCosineSimilarity;
 import org.apache.mahout.cf.taste.model.DataModel;
 import org.apache.mahout.cf.taste.similarity.UserSimilarity;
+import org.apache.mahout.math.hadoop.similarity.cooccurrence.measures.CosineSimilarity;
 
 import com.mahout.in.action.recommender.FileUtil;
 
@@ -62,13 +67,48 @@ public class TestUserSimilarity {
 //		 System.out.println("用户5和用户1的相似值是:"+similarityWithWEIGHTED.userSimilarity(1, 5));
 //		 
 		 
-		 UserSimilarity euclideanDistanceSimilarity= new EuclideanDistanceSimilarity(model);
+//		 UserSimilarity euclideanDistanceSimilarity= new EuclideanDistanceSimilarity(model);
+//		 //查看其他用户和用户1的相识度
+//		 System.err.println("测试euclideanDistanceSimilarity相似值=======================================================");
+//		 System.out.println("用户2和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 2));
+//		 System.out.println("用户3和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 3));
+//		 System.out.println("用户4和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 4));
+//		 System.out.println("用户5和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 5));
+		 
+		 
+//		 UserSimilarity cosineimilarity= new UncenteredCosineSimilarity(model);
+//		 //查看其他用户和用户1的相识度
+//		 System.err.println("测试余弦距离相似值=======================================================");
+//		 System.out.println("用户2和用户1的相似值是:"+cosineimilarity.userSimilarity(1, 2));
+//		 System.out.println("用户3和用户1的相似值是:"+cosineimilarity.userSimilarity(1, 3));
+//		 System.out.println("用户4和用户1的相似值是:"+cosineimilarity.userSimilarity(1, 4));
+//		 System.out.println("用户5和用户1的相似值是:"+cosineimilarity.userSimilarity(1, 5));
+		 
+		 
+//		 UserSimilarity tanimotoCoefficientSimilarity= new TanimotoCoefficientSimilarity(model);
+//		 //查看其他用户和用户1的相识度
+//		 System.err.println("测试Tanimoto系数相似值=======================================================");
+//		 System.out.println("用户2和用户1的相似值是:"+tanimotoCoefficientSimilarity.userSimilarity(1, 2));
+//		 System.out.println("用户3和用户1的相似值是:"+tanimotoCoefficientSimilarity.userSimilarity(1, 3));
+//		 System.out.println("用户4和用户1的相似值是:"+tanimotoCoefficientSimilarity.userSimilarity(1, 4));
+//		 System.out.println("用户5和用户1的相似值是:"+tanimotoCoefficientSimilarity.userSimilarity(1, 5));
+		 
+//		 UserSimilarity spearmanCorrelationSimilarity= new SpearmanCorrelationSimilarity(model);
+//		 //查看其他用户和用户1的相识度
+//		 System.err.println("测试Spearman秩相关系数相似值=======================================================");
+//		 System.out.println("用户2和用户1的相似值是:"+spearmanCorrelationSimilarity.userSimilarity(1, 2));
+//		 System.out.println("用户3和用户1的相似值是:"+spearmanCorrelationSimilarity.userSimilarity(1, 3));
+//		 System.out.println("用户4和用户1的相似值是:"+spearmanCorrelationSimilarity.userSimilarity(1, 4));
+//		 System.out.println("用户5和用户1的相似值是:"+spearmanCorrelationSimilarity.userSimilarity(1, 5));
+		 
+		 UserSimilarity logLikelihood= new LogLikelihoodSimilarity(model);
 		 //查看其他用户和用户1的相识度
-		 System.err.println("测试euclideanDistanceSimilarity相似值=======================================================");
-		 System.out.println("用户2和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 2));
-		 System.out.println("用户3和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 3));
-		 System.out.println("用户4和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 4));
-		 System.out.println("用户5和用户1的相似值是:"+euclideanDistanceSimilarity.userSimilarity(1, 5));
+		 System.err.println("测试LogLikelihoodSimilarity相似值=======================================================");
+		 System.out.println("用户2和用户1的相似值是:"+logLikelihood.userSimilarity(1, 2));
+		 System.out.println("用户3和用户1的相似值是:"+logLikelihood.userSimilarity(1, 3));
+		 System.out.println("用户4和用户1的相似值是:"+logLikelihood.userSimilarity(1, 4));
+		 System.out.println("用户5和用户1的相似值是:"+logLikelihood.userSimilarity(1, 5));
+		 
 		 
 		 
 	}
