@@ -1,0 +1,19 @@
+基础机器学习算法 
+	http://www.cnblogs.com/biyeymyhjob/category/395776.html
+	
+ 数据挖掘十大经典算法(9) 朴素贝叶斯分类器 Naive Bayes
+ 	http://blog.csdn.net/aladdina/article/details/4141140
+ 	
+ 数据挖掘系列（5）使用mahout做海量数据关联规则挖掘
+ http://www.cnblogs.com/fengfenggirl/p/associate_mahout.html
+ 
+ mahout关联规则源码分析 Part 1
+ http://blog.csdn.net/fansy1990/article/details/8137942
+ 
+ apache Mahout …  Algorithms(mahout官网一些文章)
+ https://cwiki.apache.org/confluence/display/MAHOUT/Parallel+Frequent+Pattern+Mining
+ 	
+ Naive Bayes 算法（NB算法）  
+ 	http://dayu9.blog.163.com/blog/static/18628907920114135413342/
+ 	http://blog.csdn.net/abcdef8c/article/details/6785866
+ 	http://baike.baidu.com/link?url=gzbtXM3FAS7om0D135ta23PV5vfSDMm1NvG1dh_wf2dG2yIO2zNTXnY-ZuQUIEBMseE41EE7CX-50bMV2qLKAK
